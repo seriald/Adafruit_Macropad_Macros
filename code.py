@@ -19,6 +19,8 @@ from adafruit_display_shapes.rect import Rect
 from adafruit_display_text import label
 from adafruit_macropad import MacroPad
 
+#macropad = MacroPad(rotation=180)
+
 
 # CONFIGURABLES ------------------------
 
