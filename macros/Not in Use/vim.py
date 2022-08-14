@@ -25,7 +25,7 @@ key_enter = Keycode.ENTER
 key_control = Keycode.CONTROL
 key_command = Keycode.COMMAND
 
-open_nvim = {"label": "open", "keys": ["vim", key_enter]}
+open_nvim = {"label": "open", "keys": ["nvim", key_enter]}
 
 # Windows
 split_vertically = {"label": "vsplit", "keys": [41, ":", "vsplit", 
