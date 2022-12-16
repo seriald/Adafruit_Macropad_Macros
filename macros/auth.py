@@ -19,18 +19,25 @@ teal = 0x07EAA1
 # https://circuitpython.readthedocs.io/projects/hid/en/latest/api.html
 
 key_enter = Keycode.ENTER
+key_control = Keycode.CONTROL
+key_command = Keycode.COMMAND
+key_alt = Keycode.ALT
+key_shift = Keycode.SHIFT
+key_tab = Keycode.TAB
 
 #xxxx = {"label": "xxx", "keys": [key_control, "c"]}
 
-work = {"label": "work", "keys": ["xxxx", key_enter]}
-w_user = {"label": "w user", "keys": ["xxxx"]}
-w2 = {"label": "admin", "keys": ["xxxx", key_enter]}
-w2_user = {"label": "admin u", "keys": ["xxxx"]}
+work = {"label": "work", "keys": ["", key_enter]}
+w_user = {"label": "w user", "keys": [""]}
+w_UPN = {"label": "w UPN", "keys": [""]}
+wa = {"label": "admin", "keys": ["", key_enter]}
+wa_UPN = {"label": "a UPN", "keys": [""]}
+wa_user = {"label": "a user", "keys": [""]}
 enter = {"label": "xxx", "keys": [key_enter]}
-xx = {"label": "xxx", "keys": ["xxxx", key_enter]}
-home = {"label": "home", "keys": ["xxxx", key_enter]}
+adm = {"label": "adm", "keys": ["", key_enter]}
+home = {"label": "home", "keys": ["", key_enter]}
 
-enc = {"label": "", "keys": [key_command, "w"]}
+enc = {"label": "", "keys": [key_tab]}
 
 app = {                       # REQUIRED dict, must be named 'app'
     'name' : 'Auth', # Application name
@@ -38,21 +45,21 @@ app = {                       # REQUIRED dict, must be named 'app'
         # COLOR    LABEL    KEY SEQUENCE
         # 1st row ----------
         (red, work["label"],work["keys"]),
-         (black, enc["label"],enc["keys"]),
-        (red, w2["label"],w2["keys"]),
+        (black, enc["label"],enc["keys"]),
+        (red, wa["label"],wa["keys"]),
         
         # 2nd row ----------
         (green, w_user["label"],w_user["keys"]),
-        (green, enc["label"],enc["keys"]),
-        (green, w2_user["label"],w2_user["keys"]),
+        (black, enc["label"],enc["keys"]),
+        (green, wa_user["label"],wa_user["keys"]),
 
         # 3rd row ----------
-         (black, enc["label"],enc["keys"]),
-         (black, enc["label"],enc["keys"]),
-         (black, enc["label"],enc["keys"]),
+        (purple, w_UPN["label"],w_UPN["keys"]),
+        (black, enc["label"],enc["keys"]),
+        (purple, wa_UPN["label"],wa_UPN["keys"]),
 
         # 4th row ----------
-        (teal, xx["label"],xx["keys"]),
+        (teal, adm["label"],adm["keys"]),
          (black, enc["label"],enc["keys"]),
         (blue, home["label"],home["keys"]),
 
